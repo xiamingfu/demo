@@ -59,6 +59,10 @@
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.3.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -84,23 +88,6 @@
                         </configuration>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.38</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.mybatis.generator</groupId>
-                        <artifactId>mybatis-generator-core</artifactId>
-                        <version>1.3.5</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.mybatis</groupId>
-                        <artifactId>mybatis</artifactId>
-                        <version>3.4.2</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
