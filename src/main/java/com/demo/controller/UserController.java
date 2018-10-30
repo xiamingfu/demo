@@ -24,15 +24,15 @@ public class UserController {
         user.setUsername("张三" + id);
         user.setPassword("zhangsan" + id);
 
-        int result = this.userService.insert(user);
+        int result = this.userService.insert(user);//调用这个向数据库写入
         System.out.println(result);
-        return user;
+        return user;//返回对象，才是真正springboot实现的在网站页面上出现的内容
     }
 
     @RequestMapping("/getById")
     @ResponseBody
     public User getById(Integer id) {
-        User user = this.userService.getById(id);
+        User user = this.userService.getById(5930);
         System.out.println(user.getUsername());
         return user;
     }
@@ -51,3 +51,4 @@ public class UserController {
         System.out.println(result);
     }
 }
+

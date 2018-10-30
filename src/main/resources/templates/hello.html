@@ -1,0 +1,101 @@
+<!DOCTYPE html><!--告知浏览器是html5，即版本号，帮助正确显示-->
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+    <script type="text/javascript">
+        function next(){
+            window.location = "/user/downloading";
+        }
+    </script>
+    <style>
+        #uploadImg{ font-size:16px; overflow:hidden; position:absolute}
+        #file{ position:absolute; z-index:100; margin-left:-180px;      font-size:60px;opacity:0;filter:alpha(opacity=0); margin-top:-5px;}
+    </style>
+    <style>
+        .div1{
+            float: left;
+            height: 41px;
+            background: #f5696c;
+            width: 144px;
+            position:relative;
+        }
+        .div2{
+            text-align:center;
+            padding-top:12px;
+            font-size:15px;
+            font-weight:800
+        }
+        .inputstyle{
+            width: 144px;
+            height: 41px;
+            cursor: pointer;
+            font-size: 30px;
+            outline: medium none;
+            position: absolute;
+            filter:alpha(opacity=0);
+            -moz-opacity:0;
+            opacity:0;
+            left:0px;
+            top: 0px;
+        }
+    </style>
+    <style>
+        .div3{
+            float: left;
+            height: 41px;
+            background: #00ffff;
+            width: 144px;
+            position:relative;
+        }
+        .div4{
+            text-align:center;
+            padding-top:12px;
+            font-size:15px;
+            font-weight:800
+        }
+        .mystyle{
+            width: 144px;
+            height: 41px;
+            cursor: pointer;
+            font-size: 30px;
+            outline: medium none;
+            position: absolute;
+            filter:alpha(opacity=0);
+            -moz-opacity:0;
+            opacity:0;
+            left:0px;
+            top: 0px;
+        }
+    </style>
+    <style>
+        .tt {
+            color:#00ffff;
+        }
+        .tt:hover {
+            color:#ff0000;
+        }
+    </style>
+
+</head>
+<body>
+<a class="tt" href="/user/downloading">test</a>
+<div class="div1">
+    <div class="div2">上传</div>
+    <input type="file" class="inputstyle">
+</div>
+<h1>${username}</h1>
+
+<!--第二种跳转方式：通过js-->
+<div class="div3">
+    <div class="div4">切换页面</div>
+    <input type="button"    class="mystyle" value="download" onclick="next()">
+</div>
+
+<span id="uploadImg">
+<input type="file" id="file" size="1" >
+<a href="#">上传图片</a></span>
+
+</body>
+</html>
