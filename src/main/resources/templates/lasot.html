@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Single Object Contour Tracking</title>
+
+    <meta charset="utf-8">
+    <!--The width of the page automatically adapts to the width of the phone screen, and the "shrink-to-fit=no" makes it useful in the iOS9.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="silhouette video database">
+    <!--springboot has automatically configured the path of static resources-->
+    <script th:src="@{/js/js.js}" src="/js/js.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-126023131-1');
+    </script>
+
+    <link th:href="@{/css/bootstrap.css}" href="/css/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/css/lasot.css}" href="/css/lasot.css" rel="stylesheet"/>
+    <link th:href="@{/css/isotope.css}" href="/css/isotope.css" rel="stylesheet" media="screen" />
+    <link th:href="@{/css/bootstrap-theme.css}" href="/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link th:href="@{/css/responsive-slider.css}" href="/css/responsive-slider.css" rel="stylesheet"/>
+    <link th:href="@{/css/animate.css}" href="/css/animate.css" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" href="/css/style.css" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.min.css}" href="/css/font-awesome.min.css" rel="stylesheet"/>
+    <link th:href="@{/css/default.css}" href="/css/default.css" rel="stylesheet"/>
+    <link th:href="@{/css/jquery.fancybox.css}" href="/css/jquery.fancybox.css" rel="stylesheet"/>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <!-- <a href="https://www.temple.edu/">-->
+    <img src="img/logo.png" height="46" class="align-baseline" alt="">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <h4>SOCT:Single Object Contour Tracking</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="downloading.html">LaSOT Benchmark</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="results.html">Evaluation and Result</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row bg_video">
+        <div class="mx-auto">
+            <video autoplay muted loop id="bg_video">
+                <source src="bg.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="text_overlay">
+              <div class="text-center">
+                  <h1>Welcome to Large-scale Single Object Tracking</h1>
+                  <h4>A large-scale and long-term tracking benchmark</h4>
+            </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
+                <h2>About LaSOT</h2>
+                <p class="lead"><b>La</b>rge-scale <b>S</b>ingle <b>O</b>bject <b>T</b>racking (<b>LaSOT</b>) aims to provide a dedicated platform for training data-hungry deep trackers as well as assessing long-term tracking performance. <b>LaSOT</b> is featured in</p>
+                <ul>
+                    <li><b>Large-scale:</b> 1,400 sequences with more 3.52 millions frames </li>
+                    <li><b>High-quality:</b> Manual annotation with careful inspection in each frame</li>
+                    <li><b>Category balance:</b> 70 categories with each containing twenty sequences </li>
+                    <li><b>Long-term tracking:</b> An average video length of 2512 frames (i.e., 83 seconds)</li>
+                    <li><b>Comprehensive labeling:</b> providing both visual and lingual annotation for each sequence</li>
+                </ul>
+                <p class="lead">Please check out the benchmark details and <strong>download</strong> links at <a href="download.html"><b>LaSOT Benchmark</b></a> page, evaluation <strong>toolkit</strong> and sample results at <a href="results.html"><b>Evaluation and Result</b></a> </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
+                <h2>Reference</h2>
+                <p class="lead">H. Fan*, L. Lin*, F. Yang*, P. Chu*, G. Deng, S. Yu, H. Bai, Y. Xu, C. Liao, and H. Ling. LaSOT: A High-quality Benchmark for Large-scale Single Object Tracking, arXiv, 2018. [<a href="https://arxiv.org/abs/1809.07845">Paper</a>]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team">
+    <div class="container">
+        <!-- Introduction Row -->
+
+
+        <!-- Team Members Row -->
+        <div class="row">
+            <h2>Core Team</h2>
+        </div>
+        <div class="row" id="core">
+        </div>
+        <script>
+        </script>
+    </div>
+</section>
+
+<section style="padding-bottom:100px">
+    <div class="container">
+        <div class="row">
+            <div class="text-left">
+                <h2>Contact</h2>
+                <p class="lead">We appreciate questions and suggestions to Heng Fan at <a href="mailto:hengfan@temple.edu"> hengfan@temple.edu</a> or Haibin Ling at at <a href="mailto:hbling@temple.edu"> hbling@temple.edu</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; LaSOT Team 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+<script type="text/javascript" src="team_info.json"></script>
+<script>
+    var team_info = JSON.parse(team_info_json);
+    var volunteers_row = document.getElementById("volunteers");
+    var core_row = document.getElementById("core");
+    for (t = 0; t < team_info.length; t++){
+
+        var team_member = document.createElement("div");
+        team_member.className = "col-md-5ths text-center mb-5"
+        var member_icon = document.createElement("img");
+        member_icon.className = "rounded-circle img-fluid d-block mx-auto";
+        member_icon.src = team_info[t]["icon"];
+        member_icon.alt = "";
+        team_member.appendChild(member_icon);
+        var member_name = document.createElement("h5");
+        member_name.innerHTML = team_info[t]['Name'];
+        team_member.appendChild(member_name);
+        if (team_info[t]["Team"] != "volunteer"){
+            core_row.appendChild(team_member);
+        }
+    }
+</script>
+</body>
+
+</html>
